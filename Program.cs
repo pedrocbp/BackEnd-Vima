@@ -77,7 +77,7 @@ namespace VimaV2
                 return Results.Ok(dbContext.Contatos);
             });
 
-            app.MapPost("/contact", (Contato contato, VimaV2DbContext dbContext) =>
+            app.MapPost("/contact/save", (Contato contato, VimaV2DbContext dbContext) =>
             {
                 dbContext.Contatos.Add(contato);
                 dbContext.SaveChanges();
